@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CDA988E6"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="396dp">
+
+
+        <ImageButton
+            android:id="@+id/Profile"
+            android:layout_width="261dp"
+            android:layout_height="210dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="#D26075EF"
+            android:contentDescription="Profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_profile" />
+
+        <ImageButton
+            android:id="@+id/Home"
+            android:layout_width="234dp"
+            android:layout_height="237dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#D26075EF"
+            android:contentDescription="Home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/toDo"
+            app:srcCompat="@drawable/ic_home" />
+
+        <ImageButton
+            android:id="@+id/toDo"
+            android:layout_width="261dp"
+            android:layout_height="225dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#D26075EF"
+            android:contentDescription="To Do List"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Profile"
+            app:srcCompat="@android:drawable/ic_menu_agenda" />
+
+        <ImageButton
+            android:id="@+id/addToDo"
+            android:layout_width="92dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Add a new task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+        <TextView
+            android:id="@+id/WeeklyProgress"
+            android:layout_width="359dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="192dp"
+            android:layout_marginEnd="66dp"
+            android:text="Weekly Progress"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="397dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="62dp"
+            android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+            android:progressDrawable="@android:drawable/progress_indeterminate_horizontal"
+            android:scrollbarSize="50dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WeeklyProgress" />
+
+        <TextView
+            android:id="@+id/MonthlyProgress"
+            android:layout_width="367dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="55dp"
+            android:text="Monthly Progress"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="424dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="54dp"
+            android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+            android:progressDrawable="@android:drawable/progress_indeterminate_horizontal"
+            android:scrollbarSize="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MonthlyProgress" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="127dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/_dologo" />
+
+        <TextView
+            android:id="@+id/Welcome"
+            android:layout_width="280dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="272dp"
+            android:layout_marginBottom="24dp"
+            android:text="Welcome back John!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/WeeklyProgress"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
